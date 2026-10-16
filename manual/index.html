@@ -27,32 +27,35 @@
     <div class="sb-group">
       <div class="g-label">Operación</div>
       <a href="#dashboard" data-t="dashboard panorama kpis indicadores">Dashboard</a>
-      <a href="#inmuebles" data-t="inmuebles propiedades localidades">Inmuebles</a>
+      <a href="#inmuebles" data-t="inmuebles propiedades localidades vistas columnas">Inmuebles</a>
       <a href="#contratos" data-t="contratos arrendamiento">Contratos</a>
+      <a href="#incrementos" class="sub" data-t="incremento renta mantenimiento inpc variación histórico">Incrementos e INPC</a>
       <a href="#alta-contrato" class="sub" data-t="alta contrato asistente pasos nuevo borrador">Alta de contrato</a>
       <a href="#contratos-tabla" class="sub" data-t="tabla columnas vistas guardadas búsqueda preferencias ordenar descargar csv">Tabla y vistas</a>
       <a href="#contratos-documentos" class="sub" data-t="documentos adjuntar pdf contrato firmado">Documentos del contrato</a>
       <a href="#cobranza" data-t="cobranza cobros cartera estatus">Cobranza</a>
-      <a href="#cobranza-tabla" class="sub" data-t="tabla cobros columnas vistas ordenar serie folio descargar csv cfdi">Tabla de cobros y vistas</a>
+      <a href="#cobranza-tabla" class="sub" data-t="tabla cobros columnas vistas ordenar serie folio buscar descargar csv cfdi">Tabla de cobros y vistas</a>
       <a href="#cobranza-acciones" class="sub" data-t="acciones pago nota de crédito recordatorio cancelar">Acciones de un cobro</a>
+      <a href="#pago-varios-cobros" class="sub" data-t="registrar pago varios cobros masivo complemento único liquidar saldos">Pago a varios cobros</a>
       <a href="#filtros" class="sub" data-t="filtros panel dinámicos fecha inmueble propietario">Panel de filtros</a>
     </div>
     <div class="sb-group">
       <div class="g-label">Facturación</div>
       <a href="#facturacion" data-t="facturación cfdi factura timbrado borrador xml">Facturación (CFDI)</a>
-      <a href="#complementos" class="sub" data-t="complemento de pago ppd pue parcialidades">Complementos de pago</a>
+      <a href="#complementos" class="sub" data-t="complemento de pago ppd pue parcialidades ver complemento único">Complementos de pago</a>
       <a href="#cancelaciones" class="sub" data-t="cancelar cancelación motivo sat rechazo">Cancelaciones y SAT</a>
+      <a href="#notas-credito" class="sub" data-t="nota de crédito cancelar sustituir canceladas">Notas de crédito</a>
       <a href="#sustitucion" class="sub" data-t="sustitución sustituir cfdi relacionado">Sustituir una factura</a>
     </div>
     <div class="sb-group">
       <div class="g-label">Cumplimiento y análisis</div>
       <a href="#pld" data-t="pld lavado dinero cumplimiento uma antilavado">PLD / Cumplimiento</a>
-      <a href="#reportes" data-t="reportes estado de cuenta morosidad fiscales">Reportes</a>
+      <a href="#reportes" data-t="reportes estado de cuenta morosidad fiscales pdf ahorro de tinta">Reportes</a>
     </div>
     <div class="sb-group">
       <div class="g-label">Directorio y administración</div>
-      <a href="#contactos" data-t="contactos inquilinos propietarios">Contactos</a>
-      <a href="#usuarios" data-t="usuarios roles permisos administrador acceso">Usuarios y permisos</a>
+      <a href="#contactos" data-t="contactos inquilinos propietarios vistas columnas">Contactos</a>
+      <a href="#usuarios" data-t="usuarios roles permisos administrador acceso vistas">Usuarios y permisos</a>
       <a href="#datos-fiscales" data-t="datos fiscales rfc régimen csd certificados">Datos Fiscales</a>
       <a href="#cuentas" data-t="cuentas bancarias depósito cotitulares">Cuentas</a>
       <a href="#impuestos" data-t="impuestos iva retenciones reglas claves sat">Impuestos</a>
@@ -81,7 +84,7 @@
   <h1>Manual Cileo</h1>
   <p class="lede">Guía de uso de Cileo: inmuebles, contratos, cobranza, facturación (CFDI) y PLD. Cada sección explica, en pocos pasos, qué hace cada pantalla y cómo se usa.</p>
   <div class="meta"><span class="tag">Capturas reales</span><span class="tag">Datos ficticios</span><span class="tag">app.cileo.io</span></div>
-  <p class="cap">Actualizado: 9 de octubre de 2026</p>
+  <p class="cap">Actualizado: 16 de octubre de 2026</p>
   <section id="intro" class="top">
     <p class="kicker">Empezar aquí</p>
     <h2>Introducción</h2>
@@ -152,6 +155,7 @@
       <div class="step"><div class="b">2</div><div><h3>Lista</h3><p>Nombre comercial, dirección, superficie y localidades por propiedad.</p></div></div>
       <div class="step"><div class="b">3</div><div><h3>Nuevo inmueble</h3><p>El botón <code>Nuevo inmueble</code> da de alta una propiedad; el buscador acota la lista.</p></div></div>
     </div>
+    <p><b>Columnas y vistas.</b> La tabla de inmuebles tiene el mismo botón de <b>preferencias</b> (Preferencias: vistas y columnas) que Contratos y Cobranza. En <b>Columnas</b> puedes alternar entre las columnas del inmueble (nombre comercial, dirección, superficie, localidades, estacionamientos, bodegas y otros) y las de la subtabla de <b>localidades</b> (superficie, tipo, propietario, cuenta predial, contrato, vigencia y renta), y guardar todo como una <b>Vista</b>. Ver <a href="#contratos-tabla">Tabla y vistas</a>.</p>
   </section>
   <div class="divider"><span>Arrendamiento</span></div>
   <section id="contratos">
@@ -186,6 +190,14 @@
     <h3 class="sub" id="contratos-documentos">Documentos del contrato</h3>
     <p>Al crear o editar un contrato puedes <b>adjuntar documentos</b>: archivos PDF, JPG, PNG, DOC o DOCX de hasta 20 MB cada uno, con nombre y fechas de emisión y vencimiento opcionales. Es donde se guarda, por ejemplo, el contrato firmado.</p>
     <p>Desde el detalle del contrato tienes <b>Ver documentos</b>, con vista previa y descarga, y <b>Editar documentos</b>.</p>
+    <h3 class="sub" id="incrementos">Incrementos e INPC</h3>
+    <p>Desde el menú de un contrato en la tabla, <b>Histórico de incrementos</b> muestra los incrementos de renta o de mantenimiento aplicados y permite agregar uno nuevo. También se agrega al confirmar un cobro que quedó <b>Pendiente de confirmación</b> por un incremento.</p>
+    <ul>
+      <li>Si el incremento es <b>por INPC</b>, eliges el <b>INPC inicial</b> y el <b>INPC final</b> por mes, y Cileo calcula la <b>Variación de INPC</b>. El INPC final debe ser posterior al inicial.</li>
+      <li>Si es una <b>variación de monto</b>, capturas la nueva renta o el nuevo mantenimiento y Cileo muestra el porcentaje de variación.</li>
+      <li>En los dos casos defines la <b>Fecha de incremento</b> y puedes dejar comentarios.</li>
+    </ul>
+    <p>Qué índice y qué periodo corresponden a tu contrato lo define lo pactado en él.</p>
   </section>
   <div class="divider"><span>Cobranza</span></div>
   <section id="cobranza">
@@ -196,7 +208,7 @@
     <div class="steps">
       <div class="step"><div class="b">1</div><div><h3>Panorama de cartera</h3><p>Cuentas por cobrar pendientes y vencidas, pagadas, y los totales del periodo.</p></div></div>
       <div class="step"><div class="b">2</div><div><h3>Pestañas por estatus</h3><p>Todos, Pendiente de envío, Pendiente de confirmación, Enviado, Pagado, Retroactivos y Cancelado.</p></div></div>
-      <div class="step"><div class="b">3</div><div><h3>Nuevo cobro y acciones</h3><p>El menú de tres puntos ofrece Generar factura, Agregar pago, Enviar recordatorio y Generar nota de crédito.</p></div></div>
+      <div class="step"><div class="b">3</div><div><h3>Nuevo cobro y acciones</h3><p>Junto a Nuevo cobro está Registrar pago, para aplicar un pago a varios cobros. El menú de tres puntos ofrece Generar factura, Agregar pago, Enviar recordatorio y Generar nota de crédito.</p></div></div>
       <div class="step"><div class="b">4</div><div><h3>Multi-moneda y descargas</h3><p>Cobros en pesos o en dólares; con el menú Descargar obtienes el CSV o los CFDIs.</p></div></div>
     </div>
     <p><b>Estatus de un cobro.</b> Los primeros siete son también pestañas de la tabla; los dos últimos son estados que aparecen durante una cancelación:</p>
@@ -216,7 +228,7 @@
     <p class="callout"><b>¿Cuándo un cobro queda Pendiente de confirmación?</b> Cuando hace falta confirmar un dato antes de enviarlo: tipo de cambio por definir (cobros en dólares), cuenta de depósito pendiente, un incremento de renta o de mantenimiento (por INPC o por una variación de monto), o un tipo de renta mixto. Estos cobros muestran la acción <b>Confirmar y enviar</b>. Antes se llamaba Bloqueado por confirmación.</p>
     <p><b>Multi-moneda.</b> Los cobros pueden ser en pesos o en dólares, con el tipo de cambio del DOF registrado. Si el pago llega en una moneda distinta a la de la factura, al registrarlo capturas el tipo de cambio y lo puedes editar; el complemento de pago se emite con esa equivalencia. Los pagos cancelados ya no cuentan en el Dashboard, en PLD ni en los reportes.</p>
     <h3 class="sub" id="cobranza-tabla">Tabla de cobros y vistas</h3>
-    <p>La tabla de cobros muestra Cobro, Inquilino · Contrato, Inmueble · Localidades, Propietario, Estado, Fechas, Conceptos, Tipo de cobro, CFDIs, <b>Serie</b> y <b>Folio</b> de la factura principal, Monto sin impuestos y Total. Al hacer clic en el encabezado se ordena por Inquilino · Contrato, Inmueble, Propietario, Fechas, Serie o Folio.</p>
+    <p>La tabla de cobros muestra Cobro, Inquilino · Contrato, Inmueble · Localidades, Propietario, Estado, Fechas, Conceptos, Tipo, CFDIs, <b>Serie · Folio</b> de la factura principal (en una sola columna), Sin impuestos y Total. Al hacer clic en el encabezado se ordena por Inquilino · Contrato, Inmueble, Propietario, Fechas o Serie · Folio. El buscador encuentra un cobro también por el <b>folio de su factura</b>.</p>
     <ul>
       <li>El botón de <b>preferencias</b> (ícono de ajustes; al pasar el cursor dice <b>Preferencias: vistas y columnas</b>) funciona igual que en Contratos: en <b>Columnas</b> eliges cuáles ver, las reordenas y ajustas su ancho, y en <b>Vistas</b> guardas esa combinación con su orden y filas por página. Las vistas son de cada usuario.</li>
       <li>Las tablas de <b>Complementos de pago</b> y <b>Notas de crédito</b> (selector por tipo de comprobante) tienen sus propias columnas, orden y vistas.</li>
@@ -244,6 +256,17 @@
     <figure class="shot"><div class="imgwrap"><img src="../assets/img/manual/09-modal-de-generar-nota-de-credito.webp" alt="Modal de generar nota de crédito" loading="lazy" decoding="async"></div></figure>
     <p><b>Otras acciones.</b> Generar factura (emite el CFDI del cobro), Enviar recordatorio (aviso al inquilino que, según el caso, incluye el borrador o la factura), Editar recordatorios (también en cobros ya pagados), Editar cobro y Cancelar cobro. Cuando el cobro ya tiene comprobante, aparecen además Ver factura, Ver borrador y Ver CFDIs para consultarlo o descargarlo.</p>
     <p>Para cancelar un pago o un cobro, y para sustituir una factura, revisa <a href="#cancelaciones">Cancelaciones y respuestas del SAT</a> y <a href="#sustitucion">Sustituir una factura</a>.</p>
+    <h3 class="sub" id="pago-varios-cobros">Registrar un pago a varios cobros</h3>
+    <p>Cuando un inquilino paga varios cobros con un solo depósito, en Cobranza usa el botón <b>Registrar pago</b> (junto a Nuevo cobro). Capturas el pago una vez y lo repartes entre los cobros.</p>
+    <ul>
+      <li>Capturas <b>Importe</b>, método de pago y los demás datos del pago, con las mismas reglas por método que en Aplicar pago. La cuenta de depósito se toma del contrato de los cobros.</li>
+      <li>Buscas los cobros por folio o contrato y los agregas. Cada opción muestra propietario, contrato y periodo; la lista se ordena del más antiguo al más reciente.</li>
+      <li>Todos los cobros deben ser <b>del mismo inquilino y en la misma moneda</b>, hasta <b>50 cobros</b> por pago. Los cobros retroactivos no entran aquí: se pagan desde su propio menú.</li>
+      <li>En <b>Asignación</b> ves el saldo pendiente de cada cobro y el <b>Monto a aplicar</b>. El importe se reparte del cobro más antiguo al más reciente; <b>Redistribuir</b> vuelve a repartirlo y <b>Liquidar saldos</b> ajusta el importe a la suma de los saldos (verifica que coincida con el depósito). El resumen muestra lo asignado y lo que queda <b>Por asignar</b>.</li>
+      <li>Un cobro con factura <b>PUE</b> timbrada solo recibe el pago si el monto cubre su saldo completo.</li>
+      <li>Si ya elegiste cobros <b>PPD timbrados</b>, solo puedes combinarlos con otros PPD timbrados.</li>
+    </ul>
+    <p><b>Complemento único.</b> Con dos o más cobros puedes activar <b>Generar complemento único</b>: se emite un solo complemento de pago que relaciona todos los cobros. Requiere que todas las facturas estén timbradas, sean PPD y tengan los mismos datos fiscales del emisor; si un cobro no cumple, el selector te dice por qué. Sin esta opción, cada cobro registra su propio pago. Si el pago de algún cobro no se pudo registrar, el resultado lo indica y puedes reintentarlo.</p>
     <h3 class="sub" id="filtros">Panel de filtros</h3>
     <p>El botón de filtros abre el panel de <b>Filtros dinámicos</b>: Fecha (año y mes, o un rango personalizado), Inmueble, Estado del contrato, Contrato, Tipo de localidad, Propietario e Inquilino. El mismo panel aplica en Cobranza, Dashboard y Reportes.</p>
     <figure class="shot" style="max-width:420px"><div class="imgwrap"><img src="../assets/img/manual/10-panel-de-filtros-dinamicos.webp" alt="Panel de filtros dinámicos" loading="lazy" decoding="async"></div></figure>
@@ -263,6 +286,7 @@
     <p>Cuando una factura se emite como <b>PPD</b> (pago en parcialidades o diferido), cada pago que recibes se ampara con un <b>complemento de pago</b>: un CFDI aparte que acredita ese abono contra la factura original.</p>
     <p>En Cobranza, el selector por tipo de comprobante te deja ver los <b>Complementos</b> con sus propias columnas. Si el pago llega en una moneda distinta a la de la factura, el complemento se emite con la equivalencia que capturaste al registrar el pago.</p>
     <p>Las facturas <b>PUE</b> (pago en una sola exhibición) no llevan complemento: se liquidan en una sola exhibición.</p>
+    <p>En el menú de cada pago, <b>Ver complemento de pago</b> abre el complemento para consultarlo o descargarlo. Para pagar varios cobros con un solo complemento, ver <a href="#pago-varios-cobros">Registrar un pago a varios cobros</a>.</p>
     <h3 class="sub" id="cancelaciones">Cancelaciones y respuestas del SAT</h3>
     <p><b>Cancelar un pago.</b> Desde el menú del pago, <b>Cancelar pago</b>. Si el pago tiene complemento timbrado, se envía al SAT la solicitud de cancelación y el pago queda en proceso de cancelación. Iniciar el trámite no garantiza la cancelación: el SAT puede aceptarla o rechazarla, y el estatus se ve en Cileo. Reglas:</p>
     <ul>
@@ -273,8 +297,19 @@
       <li>Los pagos cancelados se pueden mostrar u ocultar en la tabla de pagos.</li>
     </ul>
     <p><b>Cancelar un cobro.</b> La acción <b>Cancelar cobro</b> pide un motivo: 01 Comprobante emitido con errores con relación, 02 Comprobante emitido con errores sin relación, o 03 No se llevó a cabo la operación. El motivo 01 solo procede si ya hay un cobro timbrado que lo sustituye. Si el cobro tiene factura timbrada, se solicita la cancelación al SAT y el cobro queda en Cancelación pendiente hasta su respuesta; la aceptación no está garantizada.</p>
-    <p>No se puede cancelar un cobro que tenga complementos de pago activos (hay que cancelarlos uno por uno primero) ni uno con nota de crédito asociada.</p>
+    <p>No se puede cancelar un cobro que tenga complementos de pago activos (hay que cancelarlos uno por uno primero) ni uno con una nota de crédito activa: cancela primero la nota (ver <a href="#notas-credito">Notas de crédito</a>). Las notas de crédito canceladas ya no cuentan.</p>
     <p><b>Si el SAT rechaza una cancelación.</b> En el menú del pago, o del cobro cuando queda en Cancelación no aprobada, aparecen <b>Reintentar cancelación</b>, que vuelve a solicitarla al SAT, y <b>Revertir cancelación</b>, que regresa el pago o el cobro a un estado activo con una confirmación. Si no ves la acción, escribe a soporte.</p>
+    <h3 class="sub" id="notas-credito">Notas de crédito: cancelar y sustituir</h3>
+    <p>Las notas de crédito de un cobro se ven en el selector <b>Notas de crédito</b> de Cobranza y en el visor del cobro (Ver CFDIs), agrupadas con su factura. Cada una muestra su estado: <b>Activa</b>, <b>Cancelación pendiente</b>, <b>Cancelación no aprobada</b> o <b>Cancelada</b>. Las canceladas se ocultan; actívalas con <b>Mostrar canceladas</b>.</p>
+    <p><b>Cancelar una nota de crédito.</b> Desde su menú, o desde el visor del cobro, usa <b>Cancelar nota de crédito</b> y elige el motivo. Se solicita la cancelación al SAT, que puede aceptarla o rechazarla:</p>
+    <ul>
+      <li>Mientras el SAT responde, la nota queda en Cancelación pendiente y su acción es <b>Comprobar cancelación</b>.</li>
+      <li>Si el SAT la rechaza, la nota sigue activa y puedes usar <b>Reintentar cancelación</b>.</li>
+      <li>Solo se cancelan notas timbradas. Si la nota se aplicó como pago, cancela primero ese pago.</li>
+      <li>Una nota cancelada deja de contar en los saldos del cobro.</li>
+    </ul>
+    <p><b>Sustituir una nota de crédito.</b> Al generar una nota nueva, activa <b>Sustitución de las notas de crédito previas</b> y elige la nota a sustituir (del mismo tipo). La nueva queda relacionada con la anterior y la sustituida se cancela sola ante el SAT con el motivo 01; si esa cancelación no se completa, Cileo te avisa para que la canceles a mano con el motivo 01. Una nota sustituida ya no se puede aplicar como pago: usa la nueva.</p>
+    <p>Qué tipo de nota y qué motivo corresponden a tu caso lo valida tu contador.</p>
     <h3 class="sub" id="sustitucion">Sustituir una factura</h3>
     <p>Al generar la factura de un cobro nuevo, o en su borrador, activa <b>Sustitución de los CFDI previos</b> y elige en <b>CFDIs a sustituir</b> las facturas anteriores. Es la vía para corregir una factura ya timbrada emitiendo una nueva que la reemplaza.</p>
     <ul>
@@ -297,7 +332,7 @@
       <div class="step"><div class="b">3</div><div><h3>Operaciones</h3><p>Propietario, contrato, inquilino, renta, fecha límite y estado.</p></div></div>
       <div class="step"><div class="b">4</div><div><h3>Acción</h3><p>El botón Identificar inicia el flujo de cumplimiento.</p></div></div>
     </div>
-    <p><b>Flujo de una tarea.</b> En cada tarea tienes además Descargar documentos, Descargar XML y Descargar comprobante.</p>
+    <p><b>Flujo de una tarea.</b> En cada tarea tienes además Descargar documentos, Descargar XML y Descargar comprobante. En <b>Subir comprobante</b> cargas el acuse como <b>un solo archivo PDF</b>.</p>
     <div class="stepper"><span class="s">Identificar</span><span class="arrow">&rarr;</span><span class="s">Generar y descargar el XML</span><span class="arrow">&rarr;</span><span class="s">Subir el comprobante</span><span class="arrow">&rarr;</span><span class="s">Completado</span></div>
     <p>El Dashboard muestra la tasa de cumplimiento PLD, los contratos con PLD vencido, los próximos a vencer y los inquilinos con documentos faltantes.</p>
     <p class="callout">Cileo te ayuda a gestionar las tareas y la documentación de PLD, pero <b>completar una tarea en Cileo no confirma la presentación ante la autoridad ni garantiza el cumplimiento</b>; valida tus obligaciones con tu asesor. El módulo no está incluido en el plan Básico. Si no ves la sección PLD, escribe a soporte.</p>
@@ -313,6 +348,7 @@
       <li><b>Estatus de contratos.</b></li>
       <li><b>Fiscales de propietario.</b></li>
     </ul>
+    <p>Los reportes se generan en PDF con vista previa. Al generarlos puedes activar <b>Ahorro de tinta</b>, que genera el PDF con menos color y sin fondos decorativos, pensado para imprimir.</p>
   </section>
   <div class="divider"><span>Directorio y administración</span></div>
   <section id="contactos">
@@ -325,6 +361,7 @@
       <li><b>Propietario:</b> dueño del inmueble, a quien pertenece la renta y, cuando aplica, a cuyo nombre se factura.</li>
       <li><b>Inquilino:</b> quien renta y recibe los cobros y las facturas. Puede ser persona física o moral.</li>
       <li><b>Gestión:</b> puedes agregar notas, editar o marcar como inactivo para conservar el historial.</li>
+      <li><b>Columnas y vistas:</b> con el botón de preferencias eliges las columnas de la tabla (nombre, tipo, RFC, tipo de persona, correo) y las de la subtabla de personas de contacto (nombre, rol, teléfono, correo y estado), y las guardas como una Vista.</li>
     </ul>
   </section>
   <section id="usuarios">
@@ -333,6 +370,7 @@
     <p class="intro">En Administración, la sección <b>Usuarios</b> permite dar de alta a las personas de tu equipo con el botón Nuevo usuario. Cada usuario tiene un <b>rol</b> que define sus permisos.</p>
     <p>Lo que cada quien ve depende de ese rol: algunas secciones, como Administración y Suscripción, solo las ve el administrador. Además, ciertas funciones dependen del plan contratado o de su habilitación en tu cuenta.</p>
     <p>Si no puedes entrar o no ves una sección, revisa tus permisos con el administrador de tu cuenta.</p>
+    <p>Las tablas de Administración (Usuarios, Datos Fiscales, Cuentas e Impuestos) también tienen el botón de preferencias para elegir columnas, ordenarlas y guardar vistas, y se ordenan desde el encabezado.</p>
   </section>
   <section id="datos-fiscales">
     <p class="kicker">10 · Administración</p>
@@ -466,7 +504,7 @@
       <dt>Contrato por vencer <span class="ref">&rarr; Dashboard</span></dt><dd>Contrato cuya fecha de término se aproxima, para dar seguimiento a su renovación.</dd>
       <dt>Renovación <span class="ref">&rarr; Dashboard</span></dt><dd>Extensión o recontratación de un arrendamiento que está por terminar.</dd>
       <dt>Mantenimiento</dt><dd>Concepto asociado al contrato para cubrir gastos de conservación del inmueble, que puede cobrarse junto con la renta.</dd>
-      <dt>Vista (de tabla) <span class="ref">&rarr; Tabla y vistas</span></dt><dd>Combinación guardada de columnas, orden y filas por página en las tablas de contratos, cobros, complementos y notas de crédito. Se administra desde el botón de preferencias de la tabla. Cada usuario tiene las suyas.</dd>
+      <dt>Vista (de tabla) <span class="ref">&rarr; Tabla y vistas</span></dt><dd>Combinación guardada de columnas, orden y filas por página. Existe en las tablas de contratos, cobros, complementos, notas de crédito, inmuebles, contactos y las de Administración. Se administra desde el botón de preferencias de la tabla. Cada usuario tiene las suyas.</dd>
     <div class="gcat">Cobranza</div>
       <dt>Cobranza <span class="ref">&rarr; Cobranza</span></dt><dd>Sección donde se generan, controlan y dan seguimiento los cobros de renta y los conceptos asociados.</dd>
       <dt>Cobro</dt><dd>Cargo generado a un inquilino por un periodo o concepto (renta, mantenimiento y demás). Es la unidad de trabajo de la cobranza.</dd>
@@ -478,6 +516,7 @@
       <dt>Saldo pendiente</dt><dd>Monto que aún falta por cobrar de uno o varios cobros.</dd>
       <dt>Cartera vencida o morosidad <span class="ref">&rarr; Dashboard</span></dt><dd>Suma de los cobros vencidos no pagados. Refleja el nivel de riesgo de la cartera.</dd>
       <dt>Saldo a favor</dt><dd>Cantidad a favor del inquilino, por ejemplo cuando una nota de crédito supera la deuda actual. Queda disponible para cobros futuros.</dd>
+      <dt>Pago a varios cobros <span class="ref">&rarr; Pago a varios cobros</span></dt><dd>Un pago registrado una sola vez con Registrar pago y repartido entre varios cobros del mismo inquilino y la misma moneda.</dd>
       <dt>Conciliación</dt><dd>Proceso de confirmar que los pagos recibidos corresponden con los cobros registrados, actualizando su estatus.</dd>
       <dt>Recordatorio de pago <span class="ref">&rarr; Cobranza</span></dt><dd>Aviso que se envía al inquilino sobre un cobro próximo o vencido; según el caso incluye el borrador o la factura.</dd>
       <dt>Línea de tiempo</dt><dd>Historial cronológico de cobros, pagos y movimientos de un inquilino o contrato.</dd>
@@ -489,6 +528,7 @@
       <dt>PUE</dt><dd>Pago en una sola exhibición. La factura se liquida de una vez y no lleva complemento de pago.</dd>
       <dt>PPD</dt><dd>Pago en parcialidades o diferido. Cada pago recibido se ampara con un complemento de pago.</dd>
       <dt>Complemento de pago <span class="ref">&rarr; Complementos de pago</span></dt><dd>CFDI que ampara los pagos de una factura PPD.</dd>
+      <dt>Complemento único <span class="ref">&rarr; Pago a varios cobros</span></dt><dd>Un solo complemento de pago que relaciona varios cobros PPD timbrados del mismo inquilino, pagados con un mismo depósito.</dd>
       <dt>Nota de crédito</dt><dd>Comprobante que reduce o corrige el monto de una factura ya emitida. Si supera la deuda actual, el excedente se convierte en saldo a favor del inquilino.</dd>
       <dt>Sustitución de CFDI <span class="ref">&rarr; Sustituir una factura</span></dt><dd>Emitir una factura nueva que reemplaza a una anterior con errores, relacionándolas entre sí.</dd>
       <dt>Motivo de cancelación <span class="ref">&rarr; Cancelaciones</span></dt><dd>Razón que el SAT exige al cancelar: 01 con errores con relación, 02 con errores sin relación, o 03 no se llevó a cabo la operación.</dd>
@@ -547,6 +587,8 @@
     <details><summary>¿Cómo sé cuáles inmuebles están ocupados o vacantes?</summary><div class="ans">En el Dashboard, con los indicadores de ocupados (con contrato activo) y vacantes (sin contrato activo), según el periodo y los filtros que elijas.</div></details>
     <details><summary>¿Puedo elegir qué columnas ver en la tabla de contratos?</summary><div class="ans">Sí. El botón de preferencias (ícono de ajustes, Preferencias: vistas y columnas) abre las pestañas Columnas y Vistas: eliges y reordenas columnas, y guardas la combinación como una Vista propia. Ver <a href="#contratos-tabla">Tabla y vistas</a>.</div></details>
     <details><summary>¿Dónde quedaron los botones Columnas y Vista?</summary><div class="ans">Ahora están juntos en el botón de preferencias (ícono de ajustes) de la tabla, en las pestañas Vistas y Columnas. Tus vistas guardadas siguen ahí.</div></details>
+    <details><summary>¿Cómo registro un incremento por INPC?</summary><div class="ans">Desde el menú del contrato, Histórico de incrementos, o al confirmar un cobro pendiente por incremento. Eliges el INPC inicial y el INPC final por mes y Cileo calcula la variación. Ver <a href="#incrementos">Incrementos e INPC</a>.</div></details>
+    <details><summary>¿Puedo guardar vistas en las tablas de inmuebles o de contactos?</summary><div class="ans">Sí. Inmuebles, Contactos y las tablas de Administración tienen el botón de preferencias para elegir columnas, incluidas las de localidades o personas de contacto, y guardarlas como una vista.</div></details>
     <details><summary>¿Cómo sé qué contratos están por vencer?</summary><div class="ans">El Dashboard muestra los contratos por vencer, para que des seguimiento a su renovación.</div></details>
     <div class="fcat">Cobranza y pagos</div>
     <details><summary>¿Cómo genero un cobro?</summary><div class="ans">Cobranza y luego Nuevo cobro, o desde el contrato. Eliges el contrato, agregas los conceptos con sus impuestos y lo generas. El contrato debe tener definida una cuenta de depósito.</div></details>
@@ -561,7 +603,9 @@
     <details><summary>¿Qué es un saldo a favor?</summary><div class="ans">Una cantidad a favor del inquilino, por ejemplo cuando una nota de crédito supera la deuda actual. Queda disponible para cobros futuros.</div></details>
     <details><summary>¿Qué significan los estatus de un cobro?</summary><div class="ans">Pendiente de envío, Pendiente de confirmación, Enviado, Parcialmente pagado, Pagado, Retroactivo, Cancelado, Cancelación pendiente y Cancelación no aprobada. Los tienes explicados en <a href="#cobranza">Cobranza</a>.</div></details>
     <details><summary>¿Puedo ver el historial de pagos de un inquilino?</summary><div class="ans">Sí. Cada inquilino y cada contrato tienen una línea de tiempo con sus cobros, pagos y movimientos.</div></details>
-    <details><summary>¿Puedo ordenar la tabla de cobros o ver la serie y el folio de la factura?</summary><div class="ans">Sí. La tabla tiene columnas Serie y Folio de la factura principal, se ordena desde el encabezado (inquilino, inmueble, propietario, fechas, serie o folio) y puedes guardar tus columnas como una vista. Ver <a href="#cobranza-tabla">Tabla de cobros y vistas</a>.</div></details>
+    <details><summary>¿Puedo ordenar la tabla de cobros o ver la serie y el folio de la factura?</summary><div class="ans">Sí. La tabla tiene la columna Serie · Folio de la factura principal, se ordena desde el encabezado (inquilino, inmueble, propietario, fechas o serie y folio) y puedes guardar tus columnas como una vista. Ver <a href="#cobranza-tabla">Tabla de cobros y vistas</a>.</div></details>
+    <details><summary>¿Puedo buscar un cobro por el folio de su factura?</summary><div class="ans">Sí. El buscador de Cobranza encuentra cobros por el folio de la factura.</div></details>
+    <details><summary>Un inquilino pagó varios cobros con un solo depósito, ¿cómo lo registro?</summary><div class="ans">En Cobranza usa Registrar pago: capturas el pago una vez, agregas los cobros (mismo inquilino y misma moneda, hasta 50) y repartes el importe. Si son facturas PPD timbradas puedes generar un complemento único. Ver <a href="#pago-varios-cobros">Registrar un pago a varios cobros</a>.</div></details>
     <details><summary>¿Cómo descargo mis cobros o los CFDIs?</summary><div class="ans">En Cobranza, con el menú Descargar: CSV con todas las columnas o CFDIs (XML y PDF en un .zip, agrupados por inquilino, contrato y mes). Solo se descargan las filas visibles, así que amplía las filas por página si quieres todo.</div></details>
     <div class="fcat">Facturación, cancelaciones y notas de crédito</div>
     <details><summary>¿Qué necesito para facturar?</summary><div class="ans">Tener capturados tus datos fiscales (RFC, régimen y certificados) en Administración y luego Datos Fiscales. Sin certificados no se pueden timbrar facturas.</div></details>
@@ -573,12 +617,14 @@
     <details><summary>¿Qué es un complemento de pago?</summary><div class="ans">El CFDI que ampara cada pago de una factura emitida como PPD. Las facturas PUE no llevan complemento. Ver <a href="#complementos">Complementos de pago</a>.</div></details>
     <details><summary>¿Qué es una nota de crédito?</summary><div class="ans">Un comprobante que reduce o corrige una factura ya emitida. Si el monto supera la deuda actual, el excedente se vuelve saldo a favor del inquilino.</div></details>
     <details><summary>¿Cómo cancelo un pago que registré por error?</summary><div class="ans">Desde el menú del pago, Cancelar pago. Solo se puede cancelar el más reciente. Si tiene complemento timbrado, la cancelación se solicita al SAT, que puede aceptarla o rechazarla. Si la factura es PUE y el pago no tiene complemento, lo que procede es cancelar la factura: escribe a soporte. No aplica a cobros retroactivos. Ver <a href="#cancelaciones">Cancelaciones</a>.</div></details>
-    <details><summary>No me deja cancelar un cobro, ¿por qué?</summary><div class="ans">Si tiene complementos de pago activos, cancélalos uno por uno primero. Tampoco se puede si tiene una nota de crédito asociada, ni si sustituyó a un cobro ya cancelado. Si el cobro está sustituido, solo se cancela con el motivo 01.</div></details>
+    <details><summary>No me deja cancelar un cobro, ¿por qué?</summary><div class="ans">Si tiene complementos de pago activos, cancélalos uno por uno primero. Si tiene una nota de crédito activa, cancela primero la nota. Tampoco se puede si sustituyó a un cobro ya cancelado. Si el cobro está sustituido, solo se cancela con el motivo 01.</div></details>
+    <details><summary>¿Cómo cancelo una nota de crédito?</summary><div class="ans">Desde su menú o desde el visor del cobro, con Cancelar nota de crédito y su motivo. Se solicita al SAT: mientras responde usa Comprobar cancelación, y si la rechaza, Reintentar cancelación. Si la nota se aplicó como pago, cancela primero ese pago. Ver <a href="#notas-credito">Notas de crédito</a>.</div></details>
+    <details><summary>¿Puedo sustituir una nota de crédito con errores?</summary><div class="ans">Sí. Al generar la nueva activa Sustitución de las notas de crédito previas y elige la anterior; la sustituida se cancela sola ante el SAT con el motivo 01. Valida el caso con tu contador.</div></details>
     <details><summary>¿Cómo sustituyo una factura con errores?</summary><div class="ans">Genera la factura del cobro nuevo con la opción Sustitución de los CFDI previos activada y elige las facturas a sustituir; después cancela la anterior con el motivo 01. Ver <a href="#sustitucion">Sustituir una factura</a>. Valida el caso con tu contador.</div></details>
     <details><summary>El SAT rechazó una cancelación, ¿qué hago?</summary><div class="ans">En el menú del pago, o del cobro cuando queda en Cancelación no aprobada, tienes Reintentar cancelación, que la vuelve a solicitar, y Revertir cancelación, que regresa el pago o el cobro a un estado activo. Si no ves la opción, escribe a soporte.</div></details>
     <div class="fcat">PLD y cumplimiento</div>
     <details><summary>¿Qué es PLD y por qué aparece en Cileo?</summary><div class="ans">PLD es Prevención de Lavado de Dinero. El arrendamiento es una actividad vulnerable bajo la Ley Antilavado, con obligaciones de identificación y avisos, y Cileo integra ese cumplimiento en tu operación.</div></details>
-    <details><summary>¿Cuál es el flujo de cumplimiento PLD?</summary><div class="ans">Identificar, es decir cargar los datos y documentos de la operación; generar y descargar el XML; subir el comprobante; y la tarea queda como Completado. También puede mostrarse Vencido o Cancelado.</div></details>
+    <details><summary>¿Cuál es el flujo de cumplimiento PLD?</summary><div class="ans">Identificar, es decir cargar los datos y documentos de la operación; generar y descargar el XML; subir el comprobante (el acuse, en un solo PDF); y la tarea queda como Completado. También puede mostrarse Vencido o Cancelado.</div></details>
     <details><summary>¿Con Cileo ya cumplo con PLD?</summary><div class="ans">No por sí solo. Cileo te ayuda a gestionar las tareas y su documentación, pero no confirma la presentación ante la autoridad ni garantiza el cumplimiento. Valida tus obligaciones con tu asesor.</div></details>
     <details><summary>No veo la sección PLD, ¿por qué?</summary><div class="ans">El módulo no está incluido en el plan Básico y además depende de tu rol. Si deberías verlo y no aparece, escribe a soporte.</div></details>
     <details><summary>¿Cómo sé si tengo pendientes de PLD?</summary><div class="ans">El Dashboard muestra la tasa de cumplimiento PLD, los contratos con PLD vencido, los próximos a vencer y los inquilinos con documentos faltantes.</div></details>
@@ -588,6 +634,7 @@
     <details><summary>¿Qué muestra el Dashboard?</summary><div class="ans">Los indicadores clave de tu operación: ingresos del periodo, cobranza contra esperado, morosidad, días de atraso, ocupación, contratos por vencer y cumplimiento PLD, entre otros.</div></details>
     <details><summary>¿Qué es la morosidad?</summary><div class="ans">La proporción del saldo pendiente frente a lo facturado; refleja el nivel de cartera vencida de tu operación.</div></details>
     <details><summary>¿Qué reportes puedo obtener?</summary><div class="ans">Estado de cuenta, Cobranza y morosidad, Estatus de contratos y Fiscales de propietario.</div></details>
+    <details><summary>¿Puedo imprimir los reportes gastando menos tinta?</summary><div class="ans">Sí. Al generar el reporte activa Ahorro de tinta: el PDF sale con menos color y sin fondos decorativos.</div></details>
     <details><summary>¿Puedo exportar la información de cobranza?</summary><div class="ans">Sí. Desde Cobranza puedes Descargar CSV, que incluye los totales fiscales, y Descargar CFDIs.</div></details>
     <div class="fcat">Contactos, usuarios y cuenta</div>
     <details><summary>¿Cómo agrego un inquilino o un propietario?</summary><div class="ans">Entra a Contactos y usa Nuevo inquilino o Nuevo propietario, según corresponda.</div></details>
